@@ -1,0 +1,33 @@
+/* Identità visiva coerente su tutte le pagine */
+.brand .logo,.brand .brand-mark{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:44px!important;height:44px!important;min-width:44px!important;border-radius:13px!important;background:#139456!important;color:#fff!important;font-size:21px!important;font-weight:850!important;letter-spacing:-.08em!important;line-height:1!important;box-shadow:none!important}
+/* Home: ritmo verticale più compatto e passaggi cromatici delicati */
+body:has(.featured-carousel) main>.hero{padding-top:clamp(38px,5vw,68px)!important;padding-bottom:clamp(42px,5vw,70px)!important}
+body:has(.featured-carousel) main>.section{padding-top:clamp(42px,5vw,68px)!important;padding-bottom:clamp(42px,5vw,68px)!important}
+body:has(.featured-carousel) main>.impact-section{padding-top:clamp(46px,5vw,68px)!important;padding-bottom:clamp(46px,5vw,68px)!important}
+body:has(.featured-carousel) main>.voices-section{padding-top:clamp(44px,5vw,66px)!important;padding-bottom:clamp(44px,5vw,66px)!important}
+body:has(.featured-carousel) main>.closing{padding-top:clamp(36px,4vw,54px)!important;padding-bottom:clamp(42px,5vw,64px)!important}
+body:has(.featured-carousel) main>.section.steps{background:#f7f9f4}
+/* Avviso cookie non invasivo */
+.cookie-notice{position:fixed;bottom:18px;left:18px;z-index:9999;width:min(390px,calc(100vw - 36px));display:flex;align-items:center;gap:14px;padding:15px 17px;background:#fff;color:#24483a;border:1px solid #dbe8df;border-radius:15px;box-shadow:0 8px 28px rgba(14,49,31,.13);font:inherit;font-size:13px;line-height:1.5}
+.cookie-notice p{margin:0;flex:1}.cookie-notice button{flex-shrink:0;border:0;border-radius:9px;padding:9px 13px;background:#176b55;color:white;font:inherit;font-weight:700;cursor:pointer}.cookie-notice button:focus-visible{outline:3px solid #83cda3;outline-offset:3px}
+@media(max-width:600px){.cookie-notice{bottom:10px;left:10px;width:calc(100vw - 20px);padding:12px 13px}body:has(.featured-carousel) main>.hero{padding-top:30px!important;padding-bottom:40px!important}}
+
+/* Stabilità del primo rendering della home: nessun salto o dissolvenza iniziale. */
+body:has(.featured-carousel) .carousel-slide { transition: none; }
+body:has(.featured-carousel) .carousel-slide img { transition: none; }
+body:has(.featured-carousel) .featured-carousel { isolation: isolate; }
+body:has(.featured-carousel) .carousel-track { overflow: hidden; }
+body:has(.featured-carousel) .carousel-slide:not(.is-active) { opacity: 0; visibility: hidden; pointer-events: none; }
+body:has(.featured-carousel) .carousel-slide.is-active { opacity: 1; visibility: visible; }
+body:has(.featured-carousel) .carousel-slide img { aspect-ratio: 3 / 2; }
+/* Le transizioni tornano attive solo dopo che la pagina è completamente caricata. */
+body.home-ready .carousel-slide { transition: opacity .4s ease, visibility .4s ease; }
+body.home-ready .carousel-slide img { transition: transform .7s ease; }
+@media (prefers-reduced-motion: reduce) { body.home-ready .carousel-slide, body.home-ready .carousel-slide img { transition: none; } }
+
+/* FAQ: centra la fascia verde dei contatti rispetto al contenuto. */
+body:has(.faq-section) main > .contact-band {
+  width: min(calc(100% - 2.5rem), 1000px);
+  margin-left: auto;
+  margin-right: auto;
+}

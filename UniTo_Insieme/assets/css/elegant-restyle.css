@@ -1,0 +1,54 @@
+/* UniTo Insieme | Restyling istituzionale contemporaneo, 2026.
+   Strato visivo non invasivo: nessuna modifica a contenuti o funzionalità. */
+:root { --e-accent:#176b55; --e-deep:#10483d; --e-ink:#173b35; --e-paper:#fbfaf5; --e-line:#e1eae3; --e-shadow:0 15px 45px rgba(20,65,49,.085); }
+body { background:var(--e-paper); -webkit-font-smoothing:antialiased; }
+/* 1. Sfumature leggere, senza cambiare palette. */
+.hero, .intro { position:relative; isolation:isolate; background-image:radial-gradient(ellipse at 92% 8%,rgba(182,225,196,.30),transparent 42%),radial-gradient(ellipse at 4% 93%,rgba(227,240,208,.32),transparent 44%); }
+.hero::after, .intro::after { content:""; position:absolute; z-index:-1; width:min(32vw,370px); height:min(32vw,370px); right:2%; top:3%; border:1px solid rgba(23,107,85,.09); border-radius:50%; pointer-events:none; }
+/* 2. Card curate, con rilievo sottile. */
+.project-card, .team-card, .step, .impact-panel, .voices-card, .faq-item, .closing-box, .person-card, .about-card { border-radius:20px; border-color:var(--e-line); box-shadow:0 5px 20px rgba(20,65,49,.035); }
+.project-card { overflow:hidden; background:#fff; }
+.project-card .card-img { object-fit:cover; }
+.project-card .card-body { padding:clamp(19px,2.5vw,28px); }
+.project-card .tag { border-radius:999px; letter-spacing:.025em; }
+/* 3. Gerarchia tipografica e segno distintivo. */
+h1, h2, h3 { text-wrap:balance; }
+.hero h1, .intro h1 { letter-spacing:-.048em; line-height:1.12; }
+.section-head h2, .team-section h2, .about-section h2, .steps h2, .impact-heading h2, .voices-heading h2, .closing h2 { letter-spacing:-.035em; }
+.section-head h2::after, .team-section h2::after, .about-section h2::after, .steps h2::after { content:""; display:block; width:52px; height:3px; border-radius:5px; background:linear-gradient(90deg,var(--e-accent),#a5d3ad); margin-top:15px; }
+.eyebrow, .impact-eyebrow { letter-spacing:.11em; }
+/* 4. Ritmo e separatori decorativi discreti. */
+main > section { position:relative; }
+main > section + section:not(.hero):not(.intro)::before { content:""; display:block; width:min(1180px,calc(100% - 48px)); height:1px; margin:0 auto; background:linear-gradient(90deg,transparent,rgba(23,107,85,.12),transparent); pointer-events:none; }
+.section, .team-section, .about-section, .voices-section, .impact-section { scroll-margin-top:110px; }
+/* 5. Immagini e link dei progetti. */
+.project-card .card-link { font-weight:750; text-underline-offset:4px; }
+.project-card:focus-within { outline:2px solid rgba(23,107,85,.28); outline-offset:3px; }
+.project-grid { align-items:stretch; }
+/* 6. Footer raffinato e leggibile, conservando link e struttura. */
+.site-footer.redesigned-footer { position:relative; background:linear-gradient(145deg,#103f35,#173b35 65%,#1a5141); color:#f6fbf6; }
+.site-footer.redesigned-footer::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#9dccaa,#dcefc8,#9dccaa); }
+.redesigned-footer .footer-column a { text-underline-offset:5px; transition:color .2s ease,transform .2s ease; }
+.redesigned-footer .footer-column a:hover { color:#d6f1d4; }
+.redesigned-footer .footer-bottom { border-top-color:rgba(255,255,255,.17); }
+/* Microinterazioni solo con input idoneo, mantenendo motion.css. */
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+ .project-card, .team-card, .impact-panel, .step { transition:transform .32s cubic-bezier(.2,.7,.2,1),box-shadow .32s ease,border-color .32s ease; }
+ .project-card:hover, .project-card:focus-within, .team-card:hover, .step:hover { transform:translateY(-5px); box-shadow:var(--e-shadow); border-color:#c5dacb; }
+ .project-card .card-img { transition:transform .55s cubic-bezier(.2,.7,.2,1); }
+ .project-card:hover .card-img { transform:scale(1.035); }
+}
+@media (max-width:700px) { .hero::after,.intro::after { width:150px;height:150px; } .project-card .card-body { padding:19px; } }
+@media (prefers-reduced-motion:reduce) { .project-card,.team-card,.step,.impact-panel,.project-card .card-img { transition:none!important; animation:none!important; } }
+
+/* Onde decorative fra sezioni: puramente visive, accessibili e responsive. */
+.unito-wave-divider {height:clamp(44px,6vw,86px);width:100%;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2035%20C220%200%20410%2085%20680%2050%20S1150%200%201440%2042%20L1440%20100%20L0%20100Z%22%20fill%3D%22%23eaf3eb%22%2F%3E%3Cpath%20d%3D%22M0%2062%20C270%2024%20510%20102%20770%2065%20S1210%2031%201440%2064%20L1440%20100%20L0%20100Z%22%20fill%3D%22%23f3f7ef%22%2F%3E%3C%2Fsvg%3E");background-position:center bottom;background-repeat:no-repeat;background-size:100% 100%;pointer-events:none;flex-shrink:0;}
+.unito-wave-divider.unito-wave-alt {background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2045%20C280%2090%20470%200%20760%2040%20S1180%2090%201440%2030%20L1440%20100%20L0%20100Z%22%20fill%3D%22%23e4efe8%22%2F%3E%3Cpath%20d%3D%22M0%2062%20C300%20100%20500%2028%20760%2065%20S1200%2095%201440%2061%20L1440%20100%20L0%20100Z%22%20fill%3D%22%23f3f7ef%22%2F%3E%3C%2Fsvg%3E");}
+.unito-footer-wave {height:clamp(54px,7vw,96px);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2060%20C240%200%20480%2095%20740%2046%20S1170%204%201440%2060%20L1440%20100%20L0%20100Z%22%20fill%3D%22%23103f35%22%2F%3E%3C%2Fsvg%3E");background-position:center bottom;background-size:100% 100%;background-repeat:no-repeat;pointer-events:none;margin-bottom:-1px;}
+.site-footer.redesigned-footer::before {display:none;}
+@media(max-width:700px){.unito-wave-divider{height:42px}.unito-footer-wave{height:52px}}
+
+/* Correzione: onda e footer sono un unico blocco visivo, senza fascia vuota. */
+.unito-footer-wave { display:block; width:100%; margin:0 !important; padding:0; border:0; vertical-align:bottom; background-color:transparent; }
+.unito-footer-wave + .site-footer.redesigned-footer { margin-top:0 !important; border-top:0 !important; }
+.site-footer.redesigned-footer { background:#103f35 !important; }

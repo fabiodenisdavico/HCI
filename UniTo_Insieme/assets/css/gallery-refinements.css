@@ -1,0 +1,15 @@
+/* Gallerie fotografiche e campi di accesso */
+.project-gallery-panel .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.project-gallery-panel .gallery-grid .photo{margin:0;overflow:hidden;border-radius:18px;background:#eaf1e9}
+.project-gallery-panel .gallery-grid img{width:100%;height:170px;object-fit:cover;display:block;transition:transform .4s ease}
+.project-gallery-panel .gallery-grid .photo:hover img{transform:scale(1.035)}
+.gallery-note{color:#66766c;font-size:.94rem}
+.auth-area input::placeholder{color:#64746c;opacity:1}
+@media(max-width:650px){.project-gallery-panel .gallery-grid{gap:8px}.project-gallery-panel .gallery-grid img{height:115px}}
+@media(prefers-reduced-motion:reduce){.project-gallery-panel .gallery-grid img{transition:none}}
+
+/* Gallerie dei progetti: tutte le fotografie hanno lo stesso formato.
+   Il ritaglio e' solo visivo, senza deformare l'immagine originale. */
+.gallery > .photo { min-width: 0; overflow: hidden; border-radius: 18px; }
+.gallery > .photo > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center center; border-radius: 18px; }
+@media (max-width: 650px) { .gallery > .photo > img { aspect-ratio: 4 / 3; } }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Riepilogo — UniTo Insieme</title>
+<link href="assets/css/checkout.css" rel="stylesheet"/>
+<link href="assets/css/site-theme.css" rel="stylesheet"/>
+<link href="assets/css/demo-enhancements.css" rel="stylesheet"/>
+<link href="assets/css/unito-refinements.css" rel="stylesheet"/>
+<script defer="" src="assets/js/cookie-banner.js"></script>
+<link href="assets/css/motion.css" rel="stylesheet"/>
+<script defer="" src="assets/js/motion.js"></script>
+<link href="assets/css/elegant-restyle.css" rel="stylesheet"/>
+<link href="assets/css/visual-fixes.css" rel="stylesheet"/>
+<link href="assets/css/logo-uniforme.css" rel="stylesheet"/>
+<link href="assets/css/gallery-refinements.css" rel="stylesheet"/><link href="assets/css/decorazioni-uniformi.css" rel="stylesheet"/>
+<script defer src="assets/js/site-components.js"></script>
+</head>
+<body>
+<site-header></site-header>
+<main class="container" id="contenuto">
+<nav aria-label="Percorso di navigazione" class="crumb">
+<ol>
+<li><a href="index.html">Home</a></li>
+<li><a href="progetti.html">Progetti</a></li>
+<li><a data-project-link="" href="progetto-archivi.html"><span data-project-name="">Archivi e biblioteche</span></a></li>
+<li><span aria-current="page">Riepilogo</span></li>
+</ol>
+</nav>
+<div class="page-head">
+<h1>Riepilogo</h1>
+<ol aria-label="Passaggi" class="steps">
+<li>1. Importo e dati</li>
+<li aria-current="step">2. Riepilogo</li>
+<li>3. Conferma</li>
+</ol>
+</div>
+<div class="layout">
+<section aria-labelledby="sumTitle" class="panel">
+<h2 id="sumTitle">Controlla i tuoi dati</h2>
+<div id="summary">
+<dl class="facts">
+<div><dt>Progetto</dt><dd><span data-project-name="">Archivi e biblioteche</span></dd></div>
+<div><dt>Nome</dt><dd id="sumName"></dd></div>
+<div><dt>Email</dt><dd id="sumEmail"></dd></div>
+<div><dt>Importo</dt><dd id="sumAmount"></dd></div>
+</dl>
+<div class="total">
+<span>Totale</span>
+<span id="sumTotal"></span>
+</div>
+<div class="actions">
+<button class="btn" id="confirmBtn" type="button">Conferma simulazione <span aria-hidden="true">→</span></button>
+<a href="checkout-1.html">Modifica i dati</a>
+</div>
+</div>
+<div hidden="" id="emptyState">
+<p>Non ci sono dati da mostrare. Torna al primo passaggio per inserirli.</p>
+<div class="actions">
+<a class="btn" href="checkout-1.html">Vai al passaggio 1</a>
+</div>
+</div>
+</section>
+<aside aria-label="Il progetto" class="panel side">
+<h2><span data-project-name="">Archivi e biblioteche</span></h2>
+<p>Cultura e accessibilità. Rendere più facili da consultare i fondi storici delle biblioteche universitarie.</p>
+<a data-project-link="" href="progetto-archivi.html">Leggi il progetto</a>
+</aside>
+</div>
+</main>
+<script defer="" src="assets/js/donation-demo.js"></script>
+<site-footer></site-footer>
+<script src="assets/js/checkout-2.js"></script>
+<script defer="" src="assets/js/accessibility.js"></script>
+</body>
+</html>

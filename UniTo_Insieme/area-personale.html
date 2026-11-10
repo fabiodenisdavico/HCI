@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Area personale | UniTo insieme</title>
+<meta content="Accedi o registrati nell’area personale di UniTo insieme." name="description"/>
+<link href="assets/css/area-personale.css" rel="stylesheet"/>
+<link href="assets/css/site-theme.css" rel="stylesheet"/>
+<link href="assets/css/demo-enhancements.css" rel="stylesheet"/>
+<script defer="" src="assets/js/area-personale.js"></script>
+<link href="assets/css/unito-refinements.css" rel="stylesheet"/>
+<script defer="" src="assets/js/cookie-banner.js"></script>
+<link href="assets/css/motion.css" rel="stylesheet"/>
+<script defer="" src="assets/js/motion.js"></script>
+<link href="assets/css/elegant-restyle.css" rel="stylesheet"/>
+<link href="assets/css/visual-fixes.css" rel="stylesheet"/>
+<link href="assets/css/logo-uniforme.css" rel="stylesheet"/>
+<link href="assets/css/checkout-polish.css" rel="stylesheet"/>
+<link href="assets/css/gallery-refinements.css" rel="stylesheet"/><link href="assets/css/decorazioni-uniformi.css" rel="stylesheet"/>
+<script defer src="assets/js/site-components.js"></script>
+</head>
+<body>
+<site-header></site-header>
+<main id="contenuto">
+<section class="intro">
+<div class="wrap">
+<nav aria-label="Percorso" class="crumb">
+<a href="index.html">Home</a> / Area personale
+        </nav>
+<div class="eyebrow">Il tuo spazio</div>
+<h1>Area personale</h1>
+<p class="lead">Accedi al tuo account oppure registrati per creare un profilo.</p>
+</div>
+</section>
+<div aria-hidden="true" class="unito-wave-divider"></div><section aria-label="Accesso e registrazione" class="auth-area wrap">
+<div class="auth-card">
+<div aria-label="Scegli accesso o registrazione" class="tabs" role="tablist">
+<button aria-controls="panel-login" aria-selected="true" class="tab" data-auth-tab="login" id="tab-login" role="tab" type="button">Accedi</button>
+<button aria-controls="panel-register" aria-selected="false" class="tab" data-auth-tab="register" id="tab-register" role="tab" tabindex="-1" type="button">Registrati</button>
+</div>
+<section aria-labelledby="tab-login" class="auth-panel" data-auth-panel="login" id="panel-login" role="tabpanel">
+<h2>Accedi</h2>
+<p>Inserisci le credenziali del tuo account.</p>
+<form data-auth-form="">
+<div class="field">
+<label for="login-email">Email</label>
+<input autocomplete="email" id="login-email" name="email" placeholder="nome@esempio.it" required="" type="email"/>
+</div>
+<div class="field">
+<label for="login-password">Password</label>
+<input autocomplete="current-password" id="login-password" name="password" placeholder="Inserisci la password" required="" type="password"/>
+</div>
+<button class="submit" type="submit">Accedi</button>
+<p aria-live="polite" class="form-status" data-form-status="" role="status"></p>
+</form>
+</section>
+<section aria-labelledby="tab-register" class="auth-panel" data-auth-panel="register" hidden="" id="panel-register" role="tabpanel">
+<h2>Crea un account</h2>
+<p>Compila i campi per registrarti.</p>
+<form data-auth-form="">
+<div class="field">
+<label for="register-name">Nome</label>
+<input autocomplete="name" id="register-name" name="name" placeholder="Inserisci il tuo nome" required="" type="text"/>
+</div>
+<div class="field">
+<label for="register-email">Email</label>
+<input autocomplete="email" id="register-email" name="email" placeholder="nome@esempio.it" required="" type="email"/>
+</div>
+<div class="field">
+<label for="register-password">Password</label>
+<input autocomplete="new-password" id="register-password" minlength="8" name="password" placeholder="Crea una password (almeno 8 caratteri)" required="" type="password"/>
+<span class="hint">La password deve contenere almeno 8 caratteri.</span>
+</div>
+<button class="submit" type="submit">Crea account</button>
+<p aria-live="polite" class="form-status" data-form-status="" role="status"></p>
+</form>
+</section>
+<div class="backend-note">
+<p><strong>Nota:</strong> Demo locale: usa un’email inventata (ad esempio nome@example.com). Gli account sono memorizzati solo in questo browser, senza un server. Non utilizzare password reali.</p>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="unito-wave-divider unito-wave-alt"></div><section aria-label="Il tuo profilo" class="dashboard wrap" hidden="" id="dashboard"><div class="dashboard-head"><div><span class="eyebrow">Bentornato</span><h2 id="welcome">Il tuo spazio personale</h2><p>Gestisci il profilo e scopri le iniziative che puoi sostenere.</p></div><button class="submit logout" id="logout" type="button">Esci</button></div><div class="dashboard-grid"><article class="dash-tile"><span class="eyebrow">Profilo</span><h3>I tuoi dati</h3><p><strong>Nome:</strong> <span id="profile-name"></span></p><p><strong>Email:</strong> <span id="profile-email"></span></p><p class="hint">Profilo dimostrativo salvato in questo browser.</p></article><article class="dash-tile"><span class="eyebrow">Attività</span><h3>I tuoi contributi demo</h3><div id="donation-history"><p>Non hai ancora simulato contributi.</p></div></article></div><h3 class="dash-subtitle">I miei progetti sostenuti</h3><div aria-live="polite" class="supported-projects" id="supported-projects"></div><h3 class="dash-subtitle">Scopri altri progetti</h3><div class="dashboard-projects"><a href="progetto-archivi.html"><img alt="Scaffali di archivio" loading="lazy" src="assets/img/archivi.jpg"/>Archivi e biblioteche →</a><a href="progetto-dispensa.html"><img alt="Volontariato alimentare" loading="lazy" src="assets/img/dispensa.jpg"/>Dispensa solidale →</a><a href="progetto-sport.html"><img alt="Attività sportiva all’aperto" loading="lazy" src="assets/img/sport.jpg"/>Sport per tutti →</a><a href="progetto-studio.html"><img alt="Studenti in aula" loading="lazy" src="assets/img/studio.jpg"/>Studio per tutti →</a><a href="progetto-ricerca.html"><img alt="Ricerca in laboratorio" loading="lazy" src="assets/img/ricerca.jpg"/>Ricerca in laboratorio →</a><a href="progetto-digitale.html"><img alt="Postazioni informatiche" loading="lazy" src="assets/img/digitale.jpg"/>Competenze digitali →</a></div></section>
+</main>
+<site-footer></site-footer>
+<script defer="" src="assets/js/accessibility.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Elementi decorativi unificati: stesso riferimento viewport in ogni pagina. */
+:root { --unito-deco-edge: clamp(16px, 5vw, 76px); --unito-deco-size: clamp(112px, 22vw, 270px); }
+html body main .hero, html body main .intro { position:relative !important; isolation:isolate; overflow:visible !important; }
+/* Logo U+ identico su tutti i template, compresa la pagina Contatti. */
+html body main .hero::after, html body main .intro::after,
+html body:has(.contact-layout) main .hero.container::after,
+html body:has(#contributionForm) main .hero::after,
+html body main .project-detail-page > .hero::after {
+ content:"U+" !important; display:grid !important; place-items:center !important;
+ position:absolute !important; box-sizing:border-box !important;
+ width:var(--unito-deco-size) !important; height:var(--unito-deco-size) !important;
+ top:24px !important; bottom:auto !important;
+ right:calc(50% - 50vw + var(--unito-deco-edge)) !important; left:auto !important;
+ transform:none !important; margin:0 !important;
+ border-radius:50% !important; border:1px solid rgba(57,133,89,.10) !important;
+ background:radial-gradient(circle at 42% 35%,rgba(218,241,224,.55),rgba(239,249,241,.14) 70%,transparent 85%) !important;
+ color:rgba(61,135,88,.16) !important;
+ font:850 clamp(45px,7.5vw,96px)/1 Inter,system-ui,sans-serif !important;
+ letter-spacing:-.09em !important; opacity:1 !important; z-index:0 !important; pointer-events:none !important;
+}
+/* Ovale secondario rimosso in tutte le pagine; il cerchio U+ rimane. */
+html body main .hero::before, html body main .intro::before,
+html body:has(.contact-layout) main .hero.container::before,
+html body main .project-detail-page > .hero::before {
+ content:none !important; display:none !important; animation:none !important;
+}
+html body main .hero > *, html body main .intro > * { position:relative; z-index:1; }
+/* Ripristina il fondo a tutta larghezza della pagina Contatti senza utilizzare il pseudo-elemento. */
+html body:has(.contact-layout) main { background:radial-gradient(circle at 78% 12%,#e1f5e7 0%,transparent 36%),linear-gradient(120deg,#fff 0%,#f3faf4 100%); }
+html body:has(.contact-layout) main .hero.container { background:transparent !important; }
+@media(max-width:700px) {
+ :root { --unito-deco-edge:12px; --unito-deco-size:112px; }
+ html body main .hero::after, html body main .intro::after,
+ html body:has(.contact-layout) main .hero.container::after,
+ html body:has(#contributionForm) main .hero::after,
+ html body main .project-detail-page > .hero::after {top:18px !important; font-size:44px !important;}
+ html body main .hero::before, html body main .intro::before,
+ html body:has(.contact-layout) main .hero.container::before,
+ html body main .project-detail-page > .hero::before {top:calc(18px + var(--unito-deco-size) * .58) !important;}
+}
+
+/* Solo ombreggiatura morbida intorno al simbolo U+: niente punti, anelli aggiuntivi o scritte. */
+html body main .hero::after, html body main .intro::after,
+html body:has(.contact-layout) main .hero.container::after,
+html body:has(#contributionForm) main .hero::after,
+html body main .project-detail-page > .hero::after {
+ box-shadow: 0 12px 34px rgba(47,105,70,.10), 0 2px 9px rgba(47,105,70,.045) !important;
+}

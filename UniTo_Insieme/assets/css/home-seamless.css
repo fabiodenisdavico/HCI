@@ -1,0 +1,18 @@
+/* Home: superficie continua, senza stacchi cromatici tra le sezioni. */
+body:has(.featured-carousel) { background:#f7f9f4 !important; }
+body:has(.featured-carousel) main { background:#f7f9f4 !important; }
+body:has(.featured-carousel) main > .hero,
+body:has(.featured-carousel) main > .section,
+body:has(.featured-carousel) main > .impact-section,
+body:has(.featured-carousel) main > .section.steps,
+body:has(.featured-carousel) main > .voices-section,
+body:has(.featured-carousel) main > .closing {
+  background:#f7f9f4 !important;
+  background-image:none !important;
+  border-top:0 !important;
+  border-bottom:0 !important;
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
+/* Nessuna banda vuota tra l'ultima sezione e il footer. */
+body:has(.featured-carousel) .redesigned-footer { margin-top:0 !important; }

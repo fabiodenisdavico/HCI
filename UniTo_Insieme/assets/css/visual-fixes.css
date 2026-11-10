@@ -1,0 +1,30 @@
+/* Rifiniture 2026: continuità visiva e marchio discreto nelle intestazioni. */
+.hero, .intro { position:relative; }
+.hero::after, .intro::after { content:"U+" !important; display:grid !important; place-items:center !important; width:clamp(150px,25vw,330px) !important; height:clamp(150px,25vw,330px) !important; top:8% !important; right:3% !important; border-radius:50% !important; border:1px solid rgba(60,134,89,.12) !important; background:radial-gradient(circle at 40% 35%,rgba(219,242,225,.65),rgba(238,249,239,.18) 65%,transparent 80%) !important; color:rgba(67,142,96,.18) !important; font-size:clamp(54px,10vw,118px) !important; font-weight:850 !important; letter-spacing:-.09em !important; line-height:1 !important; z-index:0 !important; pointer-events:none !important; }
+.hero::before { opacity:.25 !important; }
+.hero > *, .intro > * { position:relative; z-index:1; }
+/* Checkout: eliminato il contrasto netto tra sfondo esterno e testata. */
+body:has(#contributionForm) { background:linear-gradient(180deg,#f5faf6 0%,#fbfaf5 55%,#fbfaf5 100%) !important; }
+body:has(#contributionForm) main.container { width:min(1080px,92%); }
+body:has(#contributionForm) .hero { border-radius:0 0 24px 24px; background:linear-gradient(115deg,rgba(248,252,248,.75),rgba(233,246,237,.65)) !important; padding:clamp(42px,6vw,78px) clamp(20px,4vw,50px) !important; margin:0 0 24px; overflow:hidden; }
+body:has(#contributionForm) .hero::before { display:none !important; }
+body:has(#contributionForm) .hero::after { width:180px !important; height:180px !important; font-size:66px !important; right:2% !important; }
+/* Banche: esempi grafici, non partner o opzioni di pagamento reali. */
+.bank-examples { margin-top:24px; padding:22px; border:1px solid #dce9df; border-radius:18px; background:linear-gradient(140deg,#fff,#f5faf6); }
+.bank-examples h3 { margin:0 0 6px; font-size:1rem; }
+.bank-examples p { margin:0 0 16px; font-size:.86rem; color:#52695d; }
+.bank-example-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.bank-example { display:flex; justify-content:center; align-items:center; text-align:center; min-height:58px; border:1px solid #e0e9e1; background:white; border-radius:12px; padding:10px 12px; font-weight:800; font-size:.91rem; letter-spacing:-.02em; color:#315e49; }
+.bank-example:nth-child(2) { color:#487b67; } .bank-example:nth-child(3) { color:#426a58; } .bank-example:nth-child(4) { color:#517968; }
+.bank-examples .bank-caveat { margin:12px 0 0; font-size:.77rem; }
+@media(max-width:700px) { .hero::after,.intro::after { width:130px !important;height:130px !important;font-size:48px !important;opacity:.55;right:0 !important; } body:has(#contributionForm) .hero::after { width:100px !important;height:100px !important;font-size:40px !important; } }
+@media(max-width:420px) { .bank-example-list { grid-template-columns:1fr 1fr; } .bank-example { font-size:.78rem; } }
+
+/* Contatti: il marchio circolare resta allineato a destra come nelle altre pagine. */
+body:has(.contact-layout) .hero.container::after {
+  left: auto !important;
+  bottom: auto !important;
+  right: 3% !important;
+  top: 8% !important;
+  transform: none !important;
+}
