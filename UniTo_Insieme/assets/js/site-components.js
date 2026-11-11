@@ -19,17 +19,28 @@ class SiteHeader extends HTMLElement {
   connectedCallback() {
     const page = currentPage(this);
     // id del contenuto principale della pagina (default: "contenuto")
-    const target = this.getAttribute("skip-target") || "contenuto";
+    //const target = this.getAttribute("skip-target") || "contenuto";
 
     const links = NAV_ITEMS.map((item) => {
       const cls = item.cls ? ` class="${item.cls}"` : "";
       const cur = item.href === page ? ' aria-current="page"' : "";
       return `<a${cls}${cur} href="${item.href}">${item.label}</a>`;
     }).join("");
-
-    this.innerHTML = `
+/*this.innerHTML = `
 <a class="skip-link" href="#${target}">Vai al contenuto</a>
 
+<header class="site-header" id="siteHeader">
+  <div class="notice">UniTo Insieme · Progetti della comunità universitaria</div>
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <span aria-hidden="true" class="brand-mark">U+</span>
+      <span>UniTo Insieme<small>UN PROGETTO STUDENTESCO</small></span>
+    </a>
+    <button aria-controls="mainNav" aria-expanded="false" class="menu-toggle" type="button">Menu</button>
+    <nav aria-label="Navigazione principale" class="nav-links" id="mainNav">${links}</nav>
+  </div>
+</header>`;*/
+    this.innerHTML = `
 <header class="site-header" id="siteHeader">
   <div class="notice">UniTo Insieme · Progetti della comunità universitaria</div>
   <div class="nav-wrap">
