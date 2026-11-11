@@ -268,7 +268,7 @@ footer a { color: #e0f3e8 !important; }
 @media(prefers-reduced-motion:reduce) { .carousel-slide,.carousel-slide img { transition:none !important; } }
 
 /* 2026 refresh — airy, friendly, editorial */
-:root { --brand-paper:#f8faf7; --brand-ink:#172b27; --brand-green:#159657; --brand-deep:#0c6542; --brand-mint:#e6f6ec; --brand-line:#e5eee8; }
+:root { --brand-paper:#f8faf7; --brand-ink:#172b27; --brand-green:#167A4A/*#159657*/; --brand-deep:#0c6542; --brand-mint:#e6f6ec; --brand-line:#e5eee8; }
 body { background:#f8faf7; }
 .notice { background:#0d6944 !important; letter-spacing:.07em; }
 .top,.site-header { background:rgba(255,255,255,.96) !important; }
@@ -279,10 +279,10 @@ body { background:#f8faf7; }
 .hero::before { content:''; position:absolute; width:520px; height:520px; border:1px solid #d9eee0; border-radius:50%; right:-250px; top:-250px; pointer-events:none; }
 .hero-grid { position:relative; z-index:1; }
 .hero h1 { font-weight:850; letter-spacing:-.065em !important; }
-.hero h1 em { font-style:normal; color:#159657; }
+.hero h1 em { font-style:normal; color:/*#159657*/#167A4A; }
 .hero-pill { display:inline-flex; align-items:center; padding:10px 15px; border-radius:100px; background:#e6f6eb; color:#137744 !important; letter-spacing:.025em !important; text-transform:none; font-size:.8rem !important; margin-bottom:20px; }
 .hero .lead { color:#64746e; line-height:1.8; }
-.btn:not(.secondary) { background:#159657 !important; color:#fff !important; border-radius:100px !important; box-shadow:0 12px 26px rgba(21,150,87,.19); }
+.btn:not(.secondary) { background:/*#159657*/#167A4A !important; color:#fff !important; border-radius:100px !important; box-shadow:0 12px 26px rgba(21,150,87,.19); }
 .btn.secondary { border-radius:100px !important; background:white !important; }
 .featured-carousel { border:7px solid white; border-radius:29px; box-shadow:0 24px 65px rgba(20,83,52,.15); }
 .carousel-track { height:clamp(390px,43vw,565px); }
@@ -317,7 +317,7 @@ body { background:#f8faf7; }
 .redesigned-footer { background:#103d30 !important; color:#f2faf5 !important; padding:0 !important; margin-top:clamp(45px,6vw,85px); }
 .footer-shell { width:min(1180px,calc(100% - 44px)); margin:auto; padding:clamp(45px,6vw,78px) 0 48px; display:grid; grid-template-columns:1.45fr .8fr 1fr; gap:clamp(25px,5vw,90px); }
 .footer-brand { display:inline-flex; align-items:center; gap:13px; font-size:1.25rem; font-weight:850; letter-spacing:-.04em; color:#fff !important; text-decoration:none; }
-.footer-symbol { display:grid; place-items:center; width:46px; height:46px; background:#209e64; border-radius:15px; font-size:1rem; }
+.footer-symbol { display:grid; place-items:center; width:46px; height:46px; background:#167A4A/*#209e64*/; border-radius:15px; font-size:1rem; }
 .footer-about p { max-width:35ch; line-height:1.75; margin:21px 0 18px; color:#d4e8dc; }
 .footer-note { display:block; max-width:40ch; font-size:.78rem; line-height:1.65; color:#b3cfc0; }
 .footer-column { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }

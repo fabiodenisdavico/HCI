@@ -29,10 +29,11 @@ class SiteHeader extends HTMLElement {
 
     this.innerHTML = `
 <a class="skip-link" href="#${target}">Vai al contenuto</a>
-<div class="notice">UniTo Insieme · Progetti della comunità universitaria</div>
+
 <header class="site-header" id="siteHeader">
+  <div class="notice">UniTo Insieme · Progetti della comunità universitaria</div>
   <div class="nav-wrap">
-    <a aria-label="UniTo Insieme, pagina iniziale" class="brand" href="index.html">
+    <a class="brand" href="index.html">
       <span aria-hidden="true" class="brand-mark">U+</span>
       <span>UniTo Insieme<small>UN PROGETTO STUDENTESCO</small></span>
     </a>
@@ -75,7 +76,7 @@ class SiteFooter extends HTMLElement {
 <footer class="site-footer redesigned-footer">
   <div class="footer-shell">
     <div class="footer-about">
-      <a aria-label="UniTo Insieme, torna alla home" class="footer-brand" href="index.html">
+      <a class="footer-brand" href="index.html">
         <span aria-hidden="true" class="footer-symbol">U+</span><span>UniTo Insieme</span>
       </a>
       <p>Idee, persone e progetti che fanno crescere la comunità universitaria.</p>
