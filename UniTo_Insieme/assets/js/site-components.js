@@ -30,6 +30,7 @@ this.innerHTML = `
 <a class="skip-link" href="#${target}">Vai al contenuto</a>
 
 <header class="site-header" id="siteHeader">
+  <div class="notice">UniTo Insieme · Progetti della comunità universitaria</div>
   <div class="nav-wrap">
     <a class="brand" href="index.html">
       <span aria-hidden="true" class="brand-mark">U+</span>
