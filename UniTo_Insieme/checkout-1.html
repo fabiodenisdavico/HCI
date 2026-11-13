@@ -21,7 +21,15 @@
 </head>
 <body>
 <site-header></site-header>
-<main class="container" id="contenuto">
+<main class="container">
+<nav aria-label="Percorso di navigazione" class="crumb">
+<ol>
+<li><a href="index.html">Home</a></li>
+<li><a href="progetti.html">Progetti</a></li>
+<li><a data-project-link="" href="progetto-archivi.html"><span data-project-name="">Archivi e biblioteche</span></a></li>
+<li><span aria-current="page">Importo e dati</span></li>
+</ol>
+</nav>
 <section aria-labelledby="pageTitle" class="hero">
 <span class="eyebrow">Sostieni il progetto</span>
 <h1 id="pageTitle">Importo e dati</h1>
@@ -33,7 +41,7 @@
 <li>3. Conferma</li>
 </ol>
 <div class="layout">
-<section aria-labelledby="formTitle" class="panel">
+<section aria-labelledby="formTitle" class="panel" id="contenuto">
 <p class="demo-disclaimer">Simulazione dimostrativa: nessun pagamento reale viene effettuato. Non inserire dati bancari.</p><h2 id="formTitle">Il tuo contributo</h2>
 <form id="contributionForm" novalidate="">
 <div class="checkout-warning" hidden="" id="formWarning" role="alert" tabindex="-1"></div>

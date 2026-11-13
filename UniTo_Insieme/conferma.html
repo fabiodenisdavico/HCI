@@ -20,7 +20,15 @@
 </head>
 <body>
 <site-header></site-header>
-<main class="container" id="contenuto">
+<main class="container">
+<nav aria-label="Percorso di navigazione" class="crumb">
+<ol>
+<li><a href="index.html">Home</a></li>
+<li><a href="progetti.html">Progetti</a></li>
+<li><a data-project-link="" href="progetto-archivi.html"><span data-project-name="">Archivi e biblioteche</span></a></li>
+<li><span aria-current="page">Conferma</span></li>
+</ol>
+</nav>
 <div class="page-head">
 <h1>Conferma</h1>
 <ol aria-label="Passaggi" class="steps">
@@ -30,7 +38,7 @@
 </ol>
 </div>
 <div class="layout">
-<section aria-labelledby="doneTitle" class="panel">
+<section aria-labelledby="doneTitle" class="panel" id="contenuto">
 <div class="ok">
 <span aria-hidden="true" class="ok-icon">✓</span>
 <p id="doneTitle"><strong id="greeting">Grazie!</strong><br/>Simulazione completata. Nessun pagamento è stato eseguito.</p>
